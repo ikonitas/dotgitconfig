@@ -1,0 +1,39 @@
+[core]
+  whitespaces = fix,space-before-tab,tab-in-indent,trailing-space
+  excludesfile = ../.gitignore
+
+[apply]
+  whitespace = fix
+
+[mergetool "threesome"]
+  cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
+  trustExitCode = true
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  status = auto
+
+[alias]
+  a = add -A
+  s = status
+  p = push
+  ci = commit
+  co = checkout
+  br = branch
+  df = diff
+  rb = rebase
+  lp = log --pretty=oneline
+  #lg = log --pretty=format:\"%Cred%h%Creset%C(bold)%x09%aN%Creset%x09%C(cyan)%ad (%cr)%Creset%x09%C(bold green)%s%Creset\" --date=iso
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --stat
+  lt = log --graph --oneline --all
+  today = log --since=midnight --author='Edvinas Jurevicius' --oneline
+
+[user]                                                                        
+  name = Edvinas Jurevicius
+  email = ikonitas@gmail.com
+
+[push]
+	default = current

@@ -16,6 +16,9 @@
   interactive = auto
   status = auto
 
+[color "status"]
+    changed=green
+
 [alias]
   a = add -A
   s = status
@@ -26,7 +29,6 @@
   df = diff
   rb = rebase
   lp = log --pretty=oneline
-  #lg = log --pretty=format:\"%Cred%h%Creset%C(bold)%x09%aN%Creset%x09%C(cyan)%ad (%cr)%Creset%x09%C(bold green)%s%Creset\" --date=iso
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --stat
   lt = log --graph --oneline --all
   today = log --since=midnight --author='Edvinas Jurevicius' --oneline
@@ -40,3 +42,5 @@
 
 [pull]
 	default = simple
+[init]
+	templatedir = ~/.git-configs
